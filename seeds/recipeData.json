@@ -1,0 +1,258 @@
+[
+  {
+    "name": "Chicken Piccata",
+    "recipe_url":"https://www.tasteofhome.com/recipes/quick-chicken-piccata/"
+  },
+  {
+    "name": "Lamb Meat Loaf",
+    "recipe_url":"https://www.bonappetit.com/recipe/lamb-meatloaf-with-yogurt-sauce"
+  },
+  {
+    "name": "Shrimp Enchiladas",
+    "recipe_url":"https://www.bonappetit.com/recipe/shrimp-enchiladas-with-roasted-sweet-potatoes-and-parsnips"
+  },
+  {
+    "name": "Chicken Pot Pie",
+    "recipe_url":"https://www.bonappetit.com/recipe/one-skillet-rotisserie-chicken-pot-pie"
+  },
+  {
+    "name": "Zucchini-Eggplant Bake",
+    "recipe_url":"https://www.bonappetit.com/recipe/cheesy-zucchini-eggplant-bake"
+  },
+  {
+    "name": "Soboro Donburi",
+    "recipe_url":"https://www.foodandwine.com/recipes/soboro-donburi-gingery-ground-beef-peas-over-rice"
+  },
+  {
+    "name": "Shrimp Creole",
+    "recipe_url":"https://www.foodandwine.com/recipes/shrimp-creole"
+  },
+  {
+    "name": "Seared Salmon",
+    "recipe_url":"https://www.foodandwine.com/recipes/seared-salmon-summer-vegetables"
+  },
+  {
+    "name": "Vegetable Hot-and-Sour Soup",
+    "recipe_url":"https://www.foodandwine.com/recipes/vegetable-hot-and-sour-soup"
+  },
+  {
+    "name": "Smoked Salmon and Cavier Pizza",
+    "recipe_url":"https://www.foodandwine.com/recipes/pizza-smoked-salmon-creme-fraiche-and-caviar"
+  },
+  {
+    "name": "Korean-Style Short Ribs",
+    "recipe_url":"https://www.foodandwine.com/recipes/grilled-korean-style-short-ribs"
+  },
+  {
+    "name": "Baked Goat Cheese Salad",
+    "recipe_url":"https://www.foodandwine.com/recipes/baked-goat-cheese-salad"
+  },
+  {
+    "name": "Fried Chicken with Tomato Gravy",
+    "recipe_url":"https://www.foodandwine.com/recipes/fried-chicken-tomato-gravy"
+  },
+  {
+    "name": "Baltimore-Style Crab Cakes",
+    "recipe_url":"https://www.foodandwine.com/recipes/baltimore-style-crab-cakes"
+  },
+  {
+    "name": "Shrimp and Corn Chowder",
+    "recipe_url":"https://www.foodandwine.com/recipes/shrimp-and-corn-chowder"
+  },
+  {
+    "name": "Ham Steaks in Madeira Sauce",
+    "recipe_url":"https://www.foodandwine.com/recipes/ham-steaks-in-madeira-sauce"
+  },
+  {
+    "name": "Chicken Tikka Masala",
+    "recipe_url":"https://www.foodandwine.com/recipes/chicken-tikka-masala"
+  },
+  {
+    "name": "Chickpea and Kale in Spicy Pomodoro Sauce",
+    "recipe_url":"https://www.foodandwine.com/recipes/chickpeas-and-kale-in-spicy-pomodoro-sauce"
+  },
+  {
+    "name": "Farro and Green Olive Salad",
+    "recipe_url":"https://www.foodandwine.com/recipes/farro-and-green-olive-salad-walnuts-and-raisins"
+  },
+  {
+    "name": "Spaghetti with Clams and Braised Greens",
+    "recipe_url":"https://www.foodandwine.com/recipes/spaghetti-clams-and-braised-greens"
+  },
+  {
+    "name": "French Onion Soup with Roasted Poblano",
+    "recipe_url":"https://www.foodandwine.com/recipes/french-onion-soup-with-roasted-poblano"
+  },
+  {
+    "name": "Kung Pao Chicken",
+    "recipe_url":"https://www.foodandwine.com/recipes/kung-pao-chicken"
+  },
+  {
+    "name": "Shallow-Paoched Salmon with Leek Beurre Blanc",
+    "recipe_url":"https://www.foodandwine.com/recipes/shallow-poached-salmon-with-leek-beurre-blanc"
+  },
+  {
+    "name": "Southern-Style Mac 'n' Cheese",
+    "recipe_url":"https://www.foodandwine.com/recipes/southern-style-mac-n-cheese"
+  },
+  {
+    "name": "Smoky Simmered Beans with Sofrito",
+    "recipe_url":"https://www.foodandwine.com/recipes/smoky-simmered-beans-with-sofrito"
+  },
+  {
+    "name": "Sausage and Red Onion Sheet Pan Quiche",
+    "recipe_url":"https://www.foodandwine.com/recipes/sausage-and-red-onion-sheet-pan-quiche"
+  },
+  {
+    "name": "Beef Pan-Fried Noodles",
+    "recipe_url":"https://omnivorescookbook.com/beef-pan-fried-noodles/"
+  },
+  {
+    "name": "Ginger Beef Stir Fry",
+    "recipe_url":"https://omnivorescookbook.com/ginger-beef/"
+  },
+  {
+    "name": "Beef Rendang",
+    "recipe_url":"https://omnivorescookbook.com/beef-randang/"
+  },
+  {
+    "name": "Instant Pot Orange Chicken",
+    "recipe_url":"https://omnivorescookbook.com/instant-pot-orange-chicken/"
+  },
+  {
+    "name": "Moo Shu Chicken",
+    "recipe_url":"https://omnivorescookbook.com/moo-shu-chicken/"
+  },
+  {
+    "name": "Vegetable Chow Fun",
+    "recipe_url":"https://omnivorescookbook.com/vegetable-chow-fun/"
+  },
+  {
+    "name": "Vegetarian Map Tofu",
+    "recipe_url":"https://omnivorescookbook.com/vegetarian-mapo-tofu/"
+  },
+  {
+    "name": "Steamed Pork Buns with Chive",
+    "recipe_url":"https://omnivorescookbook.com/steamed-pork-buns/"
+  },
+  {
+    "name": "Honey Garlic Pork Chops",
+    "recipe_url":"https://omnivorescookbook.com/honey-garlic-pork-chops/"
+  },
+  {
+    "name": "Sweet and Sour Meatballs",
+    "recipe_url":"https://omnivorescookbook.com/sweet-and-sour-meatballs/"
+  },
+  {
+    "name": "Cumin Lamb Noodles",
+    "recipe_url":"https://omnivorescookbook.com/cumin-lamb-noodles/"
+  },
+  {
+    "name": "Ham Banh Mi Sandwich",
+    "recipe_url":"https://omnivorescookbook.com/ham-banh-mi/"
+  },
+  {
+    "name": "Spinach Stuffed Chicken",
+    "recipe_url":"https://thatlowcarblife.com/spinach-stuffed-chicken-2/"
+  },
+  {
+    "name": "Keto Chilli",
+    "recipe_url":"https://thatlowcarblife.com/keto-chili/"
+  },
+  {
+    "name": "Air Fryer Lemon Pepper Wings",
+    "recipe_url":"https://thatlowcarblife.com/air-fryer-lemon-pepper-wings/"
+  },
+  {
+    "name": "Enchilada Casserole",
+    "recipe_url":"https://www.tasteofhome.com/recipes/enchilada-casser-ole/"
+  },
+  {
+    "name": "Creamy Italian Chicken",
+    "recipe_url":"https://www.tasteofhome.com/recipes/creamy-italian-chicken/"
+  },
+  {
+    "name": "Zucchini Pizza Casserole",
+    "recipe_url":"https://www.tasteofhome.com/recipes/zucchini-pizza-casserole/"
+  },
+  {
+    "name": "Classic Beef Stew",
+    "recipe_url":"https://www.tasteofhome.com/recipes/classic-beef-stew/"
+  },
+  {
+    "name": "Chicken and Dumplings",
+    "recipe_url":"https://www.tasteofhome.com/recipes/chicken-and-dumplings/"
+  },
+  {
+    "name": "Pork Chops with Scalloped Potatoes",
+    "recipe_url":"https://www.tasteofhome.com/recipes/pork-chops-with-scalloped-potatoes/"
+  },
+  {
+    "name": "Cabbage Roll Casserole",
+    "recipe_url":"https://www.tasteofhome.com/recipes/cabbage-roll-casserole/"
+  },
+  {
+    "name": "Skillet Shepherd's Pie",
+    "recipe_url":"https://www.tasteofhome.com/recipes/skillet-shepherd-s-pie/"
+  },
+  {
+    "name": "Pot Roast",
+    "recipe_url":"https://www.tasteofhome.com/recipes/flavorful-pot-roast/"
+  },
+  {
+    "name": "Baked Spaghetti",
+    "recipe_url":"https://www.tasteofhome.com/recipes/favorite-baked-spaghetti/"
+  },
+  {
+    "name": "Shrimp Monterey",
+    "recipe_url":"https://www.tasteofhome.com/recipes/shrimp-monterey/"
+  },
+  {
+    "name": "Southwestern Casserole",
+    "recipe_url":"https://www.tasteofhome.com/recipes/southwestern-casserole/"
+  },
+  {
+    "name": "Lasagna",
+    "recipe_url":"https://www.tasteofhome.com/recipes/best-lasagna/"
+  },
+  {
+    "name": "Basil Pork Chops",
+    "recipe_url":"https://www.tasteofhome.com/recipes/basil-pork-chops/"
+  },
+  {
+    "name": "Swedish Meatballs",
+    "recipe_url":"https://www.tasteofhome.com/recipes/mom-s-swedish-meatballs/"
+  },
+  {
+    "name": "Potato Kielbasa SKillet",
+    "recipe_url":"https://www.tasteofhome.com/recipes/potato-kielbasa-skillet/"
+  },
+  {
+    "name": "Honey Buffalo Chicken Wraps",
+    "recipe_url":"https://therecipecritic.com/bufffalo-chicken-wraps/"
+  },
+  {
+    "name": "Creamy Chick Mushroom Florentine",
+    "recipe_url":"https://therecipecritic.com/one-pot-creamy-chicken-mushroom-florentine/"
+  },
+  {
+    "name": "Skillet Italian sausage and Peppers",
+    "recipe_url":"https://therecipecritic.com/italian-sausage-and-peppers/"
+  },
+  {
+    "name": "Vegetable Curry",
+    "recipe_url":"https://therecipecritic.com/vegetable-curry/"
+  },
+  {
+    "name": "Buddha Bowl",
+    "recipe_url":"https://therecipecritic.com/buddha-bowl/"
+  },
+  {
+    "name": "Pasta Primavera",
+    "recipe_url":"https://therecipecritic.com/pasta-primavera/"
+  },
+  {
+    "name": "Honey Garlic Dijon Broiled Salmon",
+    "recipe_url":"https://therecipecritic.com/broiled-salmon/"
+  }
+]
