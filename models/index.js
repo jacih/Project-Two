@@ -1,10 +1,13 @@
+// user has many meals;
+// recipe has many meals;
+
 const Recipe = require('./Recipe');
 const User = require('./User');
-const MealPlan = require('./MealPlan');
+const Meal = require('./Meal');
 
 Recipe.belongsToMany(User, {
   through: {
-    model: MealPlan,
+    model: Meal,
     unique: false
   }, 
   as: 'user_recipes'
@@ -12,10 +15,11 @@ Recipe.belongsToMany(User, {
 
 User.belongsToMany(Recipe, {
   through: {
-    model: MealPlan,
+    model: Meal,
     unique: false
   },
   as: 'planned_meal'
 });
 
-module.exports = { Recipe, User, MealPlan };
+
+module.exports = { Recipe, User, Meal };
