@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Meal, Recipe } = require('../../models');
+const { User } = require('../../models');
 
 // Create User
 router.post('/', async (req, res) => {
@@ -36,7 +36,7 @@ router.post('/login', async (req, res) => {
       if (!UserData) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Incorrect email or password' });
         return;
       }
   
@@ -45,7 +45,7 @@ router.post('/login', async (req, res) => {
       if (!validPassword) {
         res
           .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
+          .json({ message: 'Incorrect email or password' });
         return;
       }
   
@@ -53,7 +53,7 @@ router.post('/login', async (req, res) => {
         req.session.user_id = UserData.id;
         req.session.logged_in = true;
         
-        res.json({ user: UserData, message: 'You are now logged in!' });
+        res.json({ user: UserData, message: 'Login Successful' });
       });
   
     } catch (err) {
