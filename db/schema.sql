@@ -1,2 +1,3 @@
--- DROP DATABASE IF EXISTS user_db;
--- CREATE DATABASE user_db;
+DROP DATABASE IF EXISTS mealplan_db;
+CREATE DATABASE mealplan_db;
+USE mealplan_db;
