@@ -20,7 +20,6 @@ Recipe.init(
     },
     ingredients: {
       type: DataTypes.STRING,
-
       allowNull: false
     },
     image: {

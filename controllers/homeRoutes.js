@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
                     attributes: ['name'],
                 },
             ],
-        }),
+        })
         const meals = MealPlan.map((meal) => meal.get({ plain: true }));
         
         res.render('homepage', {
@@ -37,7 +37,7 @@ router.get('/meal/:id', async (req, res) => {
         const meals = MealPlan.get({ plain: true });
 
         res.render('meal', {
-            ...meal,
+            ...meals,
             logged_in: req.session.logged_in
         });
     } catch (err) {
@@ -45,15 +45,16 @@ router.get('/meal/:id', async (req, res) => {
     }
 });
 
-router.get('/profile', withAuth, async (req, res) => {
+router.get('/mealplan', withAuth, async (req, res) => {
     try {
         const userData = await User.findbyPk(req.session.user_id, {
             attributes: { excludes: ['password'] },
             include: [{ model: Meal }],
         });
+
         const user = userData.get({ plain: true });
 
-        res.render('profile', {
+        res.render('mealplan', {
             ...user,
             logged_in: true
         });
