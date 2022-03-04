@@ -16,14 +16,14 @@ Recipe.init(
       allowNull: false
     },
     description: {
-      type: DataTypes.OBJECT
+      type: DataTypes.STRING,
     },
     ingredients: {
-      type: DataTypes.OBJECT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     instructions: {
-      type: DataTypes.OBJECT,
+      type: DataTypes.STRING,
       allowNull: false
     },
     image: {
