@@ -1,29 +1,33 @@
 const sequelize = require('../config/connection');
 const { User, Meal, Recipe } = require('../models');
+const scraper = require('scrapeRecipes');
 
 const recipeData = require('./recipeData.json');
 const userData = require('./userData.json');
 
-const seedDatabase = async() => {
+let data = scraper();
+
+const seedDatabase = async () => {
   await sequelize.sync({ force: true });
- 
-  const users = await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
 
-  const recipes = await Recipe.bulkCreate(recipeData);
+  const recipe = await Recipe.Create([
+  {
+    name: data.name, 
+    description: data.description, 
+    ingedients: data.ingredients,
+    image: data.image
+    }
+  ])
+  //.then(() => console.log('Rcipe data has been saved')
+  // const meal = await Meal.BulkCreate({
+  // name: data.name  
+  // });
 
-  for (let i = 0; i < 8; i++) {
-    const { id: randomRecipeId } = recipes[Math.floor(Math.random() * recipes.length)];
-    await Meal.create({
-      ...meal,
-      user_id: users[Math.floor(Math.random() * users.length)].id,
-      recipe_id: randomRecipeId
-    }).catch.log(err);
-    console.log(err);
-  }
+  // const users = await User.bulkCreate(userData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
   process.exit(0);
 };
 
-module.exports(seedDatabase);
+seedDatabase();
