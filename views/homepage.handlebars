@@ -1,10 +1,9 @@
-{{!-- {{#each users as |user| }}
-<div class="row align-center mb-5">
-  <div class="col-md-6">
-    <h2>{{{get_emoji}}} {{user.name}}</h2>
-  </div>
-  <div class="col-md-6">
-    <h3><a href="mailto:{{user.email}}">{{user.email}}</a></h3>
-  </div>
+<div class="p-5">
+{{#if loggedIn}}
+    <h1>I cant remember what we are showing if logged in</h1>
+    <p>maybe {{user.name}} or {{mealplan}} ?</p>
+    <button type="button" class="btn btn-primary p-5">Get Meal Plan</button>
 </div>
-{{/each}} --}}
+{{#else}}
+    <h1>Log in!</h1>
+{{/if}}

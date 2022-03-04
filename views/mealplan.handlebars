@@ -1,0 +1,25 @@
+<!-- i dont know where we are going to use this, but we probably use this multpile times -->
+<!-- this is just the format for the card created that displays meal info-->
+{{#each meals as |meal|}}
+<div class="container">
+    <div class="card">
+    <div class="row">
+        <div class="col-sm-4 bg-primary">
+                <!-- <img src=> it was taking me too long to figure out how to format the image size-->
+                <!-- would use {{meal.image}} or whatever correct object name-->
+        </div>
+        <div class="col-sm-7 text-center bg-secondary">
+            <h1>{{meal.name}}</h1>
+            <p>{{meal.description}}</p>
+            <!-- <p> .getDay()+1 or something in helper function to get the day of the week? next card can be +2? dont know how it will work-->
+        </div>
+        <div class="col-sm-1 text-center my-auto">
+            <button type="button" class="btn btn-primary">Delete Meal</button><!-- can be add meal-->
+        </div>
+    </div>
+    </div>
+</div>
+{{/each}}
+<!-- i guess we use another one similar to this but instead its something like-->
+{{!-- {{#each mealplan as |dailymeal|}} --}}
+{{!-- when we are showing the the mealplan to the users? the (html) card format would be the same --}}
