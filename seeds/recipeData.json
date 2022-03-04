@@ -160,10 +160,6 @@
     "recipe_url":"https://thatlowcarblife.com/keto-chili/"
   },
   {
-    "name": "Air Fryer Lemon Pepper Wings",
-    "recipe_url":"https://thatlowcarblife.com/air-fryer-lemon-pepper-wings/"
-  },
-  {
     "name": "Enchilada Casserole",
     "recipe_url":"https://www.tasteofhome.com/recipes/enchilada-casser-ole/"
   },
@@ -250,9 +246,5 @@
   {
     "name": "Pasta Primavera",
     "recipe_url":"https://therecipecritic.com/pasta-primavera/"
-  },
-  {
-    "name": "Honey Garlic Dijon Broiled Salmon",
-    "recipe_url":"https://therecipecritic.com/broiled-salmon/"
   }
 ]

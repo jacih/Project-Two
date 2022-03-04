@@ -22,10 +22,6 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    instructions: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
     image: {
       type: DataTypes.STRING,
     },
