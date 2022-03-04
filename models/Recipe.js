@@ -13,13 +13,24 @@ Recipe.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     description: {
       type: DataTypes.OBJECT
     },
-    recipe_link : {
-      type:DataTypes.STRING
+    ingredients: {
+      type: DataTypes.OBJECT,
+      allowNull: false
+    },
+    instructions: {
+      type: DataTypes.OBJECT,
+      allowNull: false
+    },
+    image: {
+      type: DataTypes.STRING,
+    },
+    recipe_link: {
+      type: DataTypes.STRING
     },
   },
   {
