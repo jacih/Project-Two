@@ -11,20 +11,22 @@
 
 <body>
     <div class="container">
-        <div class="card">
         <div class="row">
-            <div class="col-sm-3 bg-primary">
-                <!-- <img src=> it was taking me too long to figure out how to format the image size-->
-                <!-- would use {{meal.image}} or whatever correct object name-->
+            <a href ='http://www.google.com' style="text-decoration: none;">
+            <div class="card col-sm shadow-lg" style="border-radius:25px;" id="mealCard">
+                <div class="container">
+                <div class="row">
+                    <div class="w-75 text-center">
+                        <h1>Meal Name</h1>
+                        <p>Click for more Info!</p>
+                    </div>
+                    <div class="col-sm text-center my-auto">
+                        <button type="button" class="btn btn-primary">Add Meal</button>
+                    </div>
+                </div>
+                </div>
             </div>
-            <div class="col-sm-7 text-center bg-secondary">
-                <h1>Meal Name</h1>
-                <p>description</p>
-            </div>
-            <div class="col-sm-2 text-center my-auto">
-                <button type="button" class="btn btn-primary">Delete Meal</button>
-            </div>
-        </div>
+            </a>
         </div>
     </div>    
 </body>
