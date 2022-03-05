@@ -1,0 +1,39 @@
+
+.header h1 {
+    color: whitesmoke;
+    font-size: 4em;
+    border-bottom-style: solid;
+    border-color: white;
+    /* font-family:  */
+}
+
+.footer h1 {
+    border-bottom-style: solid;
+    border-color: white;
+}
+#headSctn {
+    
+    border-width: 10px;
+    background-color: black;
+    border-radius:25px;
+}
+
+#asideSctn {
+    background-color: black;
+    border-radius:25px;
+    color: white;
+}
+
+.footer {
+    background-color:black;
+    color: white;
+    /* font-family:  */
+}
+
+.header {
+    
+}
+
+#popMeals {
+    font-size: 1.5em;
+}
