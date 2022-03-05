@@ -1,9 +1,17 @@
-<div class="p-5">
 {{#if loggedIn}}
-    <h1>I cant remember what we are showing if logged in</h1>
-    <p>maybe {{user.name}} or {{mealplan}} ?</p>
-    <button type="button" class="btn btn-primary p-5">Get Meal Plan</button>
-</div>
+    <div class="card w-75 h-75 mx-auto mt-3 bloo2" id="homeCard">
+        <div class="userPitch">
+            <p class="mx-4 mt-3">User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story User Story? User Story ! </p>
+        </div>
+        <div class="pbor"></div>
+            <h1 class="text-center my-2">Try</h1>
+            <h1 class="text-center merckScript">7 Day Meal Plan</h1>
+            <h1 class="text-center my-2">Absolutely Free!</h1>
+        <div class="pbor"></div>
+        <div class="mx-auto my-auto">
+            <button type="button" class="btn btn-secondary mx-auto" id="genMeal">Generate Meal Plan</button>
+        </div>
+    </div>
 {{#else}}
     <h1>Log in!</h1>
 {{/if}}
