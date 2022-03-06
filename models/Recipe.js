@@ -20,7 +20,10 @@ Recipe.init(
     },
     ingredients: {
       type: DataTypes.STRING,
-
+      allowNull: false
+    },
+    instrutions: {
+      type: DataTypes.STRING(5000),
       allowNull: false
     },
     image: {

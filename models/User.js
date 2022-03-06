@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
 class User extends Model {
   checkPassword(loginPw) {
@@ -20,6 +20,13 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [8, 16]
+      }
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -34,6 +41,13 @@ User.init(
     }
   },
   {
+    hooks: {
+      beforeCreate: async (newUser) => {
+        newUser.password = await bcrypt.hash(newUser.password, 10);
+        return newUser;
+      },
+      // should we include an update fave food hook?
+  },
     sequelize,
     timestamps: false,
     freezeTableName: true,
