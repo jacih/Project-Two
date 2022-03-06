@@ -1,5 +1,5 @@
 {{#each Recipe as |dinner|}}
-<p>{{dinner.name}} <span type="button" class="btn btn-primary" id="">Add to Meals</span></p> <!-- post route for recipe to mealplan -->
+<p>{{dinner.name}} <span type="button" class="btn btn-primary" id="addMeal">Add to Meals</span></p> <!-- post route for recipe to mealplan -->
 {{/each}}
 
 {{!-- dropdown menu (not sure if it works)--}}
@@ -23,8 +23,8 @@
     <div class="col-sm-3">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">{{dinner.title}}</h3>
-                <button type="button" class="btn btn-primary">Add Dinner</button>
+                <h3 class="card-title">{{dinner.name}}</h3>
+                <button type="button" class="btn btn-primary" id="addMeal">Add Dinner</button>
             </div>
         </div>
     </div>
