@@ -1,5 +1,7 @@
 const recipeScraper = require('recipe-scraper');
+const fs = require('fs');
 const mealFuncObj = require('../seeds/mealData');
+
 const mealData = mealFuncObj.mealData;
 
 //declaring accumulators to be used elsewhere;
@@ -55,7 +57,6 @@ const sevenDayMeals = () => {
 
 // listing all exports req'd to be used elsewhere;
 module.exports = {
-  mealURLs,
   scrapeRecipes, 
   generateRandomMeal,
   sevenDayMeals,
