@@ -36,8 +36,7 @@ User.init(
       }
     },
     favoriteFood: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
     }
   },
   {

@@ -481,13 +481,18 @@ const mealData =
   }
 ]
 
+// seed meal table with a new meal class for each name;
 const seedMeals = () => {
   for (let m = 0; m < mealData.length; m++) {
-    mealname = mealData[m].name;
-    const meal = await Meal.create({ name: mealname });
+    let mealname = mealData[m].name;
+    // console.log(mealname);
+    // creating new class for every name in the mealData array;
+    const meal = Meal.create({ name: mealname });
     // console.log(meal);
   }
 }
-
-module.exports = mealData;
-module.exports = seedMeals;
+// listing exports req'd to be used elsewhere;
+module.exports =  {
+  seedMeals,
+  mealData
+};

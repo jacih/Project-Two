@@ -1,10 +1,10 @@
-const mealData = require('../seeds/mealData');
 const recipeScraper = require('recipe-scraper');
+const mealFuncObj = require('../seeds/mealData');
+const mealData = mealFuncObj.mealData;
 
-//accumulator to hold all meal URLs;
-let mealURLs = [];
-//accumulator to hold all meal names to later randomize for 7-day mealplan;
-let mealNames = [];
+//declaring accumulators to be used elsewhere;
+const mealURLs = [];
+const mealNames = [];
 
 // function to call npm recipe-scraper package on all urls in mealData seed
 const scrapeRecipes = async () => {
@@ -19,17 +19,26 @@ const scrapeRecipes = async () => {
   for (let r = 0; r < mealURLs.length; r++) {
     // console.log(mealURLs[r]);
     let recipeURL = mealURLs[r];
-    let data = await recipeScraper(recipeURL);
-    return data;
+    recipeScraper(`${recipeURL}`).then(data => {
+      // console.log('this function is being read');
+      // console.log(data);
+      return data;
+    }).catch(error => {
+      console.log(error);
+      console.log('The scraper is not working!');
+    });
   }
+  // console.log(mealNames);
+  // console.log(mealURLs);
 }
 
-//
+// picks one random meal from list and outputs meal name in string;
 const generateRandomMeal = () => {
   let meal = mealNames[Math.floor(Math.random()*mealNames.length)];
   return meal;
 }
 
+// generates an array of 7 strings of meal names;
 const sevenDayMeals = () => {
   let mealplan = [];
   for (let d = 0; d < 7; d++) {
@@ -39,7 +48,15 @@ const sevenDayMeals = () => {
   return mealplan;
 }
 
-// naming all exports needed in other js files;
-module.exports = scrapeRecipes;
-module.exports = generateRandomMeal;
-module.exports = sevenDayMeals;
+// function calls for testing individual functions;
+// scrapeRecipes();
+// generateRandomMeal();
+// sevenDayMeals();
+
+// listing all exports req'd to be used elsewhere;
+module.exports = {
+  mealURLs,
+  scrapeRecipes, 
+  generateRandomMeal,
+  sevenDayMeals,
+};
