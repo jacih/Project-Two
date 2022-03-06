@@ -22,7 +22,7 @@ Recipe.init(
       type: DataTypes.STRING,
       allowNull: false
     },
-    instrutions: {
+    instructions: {
       type: DataTypes.STRING(5000),
       allowNull: false
     },
