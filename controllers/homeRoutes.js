@@ -52,10 +52,18 @@ router.get('/mealplan', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 })
+router.get('/register', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/addmeal');
+        return;
+    }
+    res.render('register');
+})
+
 
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/addmeal');
         return;
     }
     res.render('login');
