@@ -2,46 +2,27 @@ const router = require('express').Router();
 const { User, Meal } = require('../models');
 const withAuth = require ('../utils/auth');
 
+//Route to get all meals
 router.get('/', async (req, res) => {
-    try {
-        const MealPlan = await Meal.findAll ({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        })
-        const meals = MealPlan.map((meal) => meal.get({ plain: true }));
-        
-        res.render('homepage', {
-            meals,
-            logged_in: req.session.logged_in
-        });
+    const allmealData = await Meal.findAll().catch((err) => {
+      res.json(err);
+    })
+  
+    const meals = allmealData.map((meal) => meal.get({ plain: true }));
+    res.render ('getmeals', {meals});
+  });
+  
+//Route to get a single meal
+router.get('/meals/:id', async (req, res) => {
+    try{
+      const singlemealData = await Meal.findByPk(req.params.id);
+      if(!singlemealData) {
+        res.status(404).json({message: 'No Meal found with this id'});
+        return;
+      }
+      const meal = singlemealData.get({ plain: true });
     } catch (err) {
-        res.status(500).json(err);
-    }
-});
-
-router.get('/meal/:id', async (req, res) => {
-    try {
-        const MealPlan = await Meal.findbyPk(req.params.id, {
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                }
-            ]
-        })
-        
-        const meals = MealPlan.get({ plain: true });
-
-        res.render('meal', {
-            ...meals,
-            logged_in: req.session.logged_in
-        });
-    } catch (err) {
-        res.status(500).json(err);
+      res.status(500).json(err);
     }
 });
 
