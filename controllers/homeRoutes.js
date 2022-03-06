@@ -2,6 +2,11 @@ const router = require('express').Router();
 const { User, Meal } = require('../models');
 const withAuth = require ('../utils/auth');
 
+// route to render home page
+// router.get('/', async (req, res) => {
+//     res.render('homepage');
+// });
+
 //Route to get all meals
 router.get('/', async (req, res) => {
     const allmealData = await Meal.findAll().catch((err) => {
