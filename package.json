@@ -31,5 +31,6 @@
     "recipe-scraper": "^2.1.1",
     "sequelize": "^6.3.5"
   },
-  "homepage": "https://github.com/jacih/Project-Two#readme"
+  "homepage": "https://github.com/jacih/Project-Two#readme",
+  "devDependencies": {}
 }
