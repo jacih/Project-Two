@@ -4,20 +4,57 @@ const { User } = require('../../models');
 // Create User
 router.post('/', async (req, res) => {
     try {
-        const UserData = await User.create(req.body);
+      const userData = await User.create({
+        username: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+    });
+
 
         req.session.save(() => {
-            req.session.user_id = UserData.id;
             req.session.logged_in = true;
 
-            res.status(200).json(UserData);
+            res.status(200).json(userData);
         })
     } catch (err) {
         res.status(400).json(err);
     }
 })
 
-// Delete User
+//User Login
+router.post('/login', async (req, res) => {
+  try {
+    const userData = await User.findOne({ where: { email: req.body.email } });
+
+    if (!userData) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password' });
+      return;
+    }
+
+    const validPassword = await userData.checkPassword(req.body.password);
+
+    if (!validPassword) {
+      res
+        .status(400)
+        .json({ message: 'Incorrect email or password' });
+      return;
+    }
+
+    req.session.save(() => {
+      req.session.user_id = userData.id;
+      req.session.logged_in = true;
+      
+      res.json({ user: userData, message: 'Login Successful' });
+    });
+
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
+//User logout
 router.post('/logout', (req, res) => {
     if (req.session.logged_in) {
         req.session.destroy(() => {
@@ -28,37 +65,5 @@ router.post('/logout', (req, res) => {
     }
 })
 
-//User Login
-router.post('/login', async (req, res) => {
-    try {
-      const UserData = await User.findOne({ where: { email: req.body.email } });
-  
-      if (!UserData) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password' });
-        return;
-      }
-  
-      const validPassword = await UserData.checkPassword(req.body.password);
-  
-      if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password' });
-        return;
-      }
-  
-      req.session.save(() => {
-        req.session.user_id = UserData.id;
-        req.session.logged_in = true;
-        
-        res.json({ user: UserData, message: 'Login Successful' });
-      });
-  
-    } catch (err) {
-      res.status(400).json(err);
-    }
-});
 
 module.exports = router;
