@@ -21,5 +21,4 @@ User.belongsToMany(Recipe, {
   as: 'planned_meal'
 });
 
-
 module.exports = { Recipe, User, Meal };

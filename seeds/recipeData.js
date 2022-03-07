@@ -14,10 +14,11 @@ const recipeSeeding = () => {
   const { response } = require('express');
   for (let i = 0; i < mealData.length; i++) {
    let recipeURL = mealData[i].recipe_url;
-   recipeScraper(recipeURL).then(data => {
+   recipeScraper(`${recipeURL}`).then(data => {
      const strInst = data.instructions.join(' ');
      const ingreds = data.ingredients.toString();
      const instrs = strInst.toString();
+
      const recipe = Recipe.create({ 
       name: data.name,
       description: data.description,
@@ -26,7 +27,7 @@ const recipeSeeding = () => {
       image: data.image,
       recipe_link: recipeURL,
      });
-    return recipe;
+    // return recipe;
   }).catch(error => {
     console.log('No recipe data exists!')
   }); 
