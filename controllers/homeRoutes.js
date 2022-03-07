@@ -3,19 +3,19 @@ const { User, Meal } = require('../models');
 const withAuth = require ('../utils/auth');
 
 // route to render home page
-// router.get('/', async (req, res) => {
-//     res.render('homepage');
-// });
+router.get('/', async (req, res) => {
+    res.render('homepage');
+});
 
 //Route to get all meals
-router.get('/', async (req, res) => {
-    const allmealData = await Meal.findAll().catch((err) => {
-      res.json(err);
-    })
+// router.get('/', async (req, res) => {
+//     const allmealData = await Meal.findAll().catch((err) => {
+//       res.json(err);
+//     })
   
-    const meals = allmealData.map((meal) => meal.get({ plain: true }));
-    res.render ('getmeals', {meals});
-});
+//     const meals = allmealData.map((meal) => meal.get({ plain: true }));
+//     res.render ('getmeals', {meals});
+// });
 
 //Route to get a single meal
 router.get('/meal/:id', async (req, res) => {
