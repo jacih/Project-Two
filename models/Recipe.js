@@ -12,25 +12,25 @@ Recipe.init(
       autoIncrement: true
     },
     name: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(1000),
       allowNull: false
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT(),
     },
     ingredients: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.TEXT(),
+      // allowNull: false
     },
     instructions: {
-      type: DataTypes.STRING(5000),
-      allowNull: false
+      type: DataTypes.TEXT(),
+      // allowNull: false
     },
     image: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT(),
     },
     recipe_link: {
-      type: DataTypes.STRING
+      type: DataTypes.TEXT()
     },
   },
   {
