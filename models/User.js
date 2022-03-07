@@ -16,7 +16,7 @@ User.init(
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       allowNull: false
     },
@@ -24,7 +24,7 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8, 16]
+        len: [8],
       }
     },
     email: {
@@ -44,6 +44,10 @@ User.init(
       beforeCreate: async (newUser) => {
         newUser.password = await bcrypt.hash(newUser.password, 10);
         return newUser;
+      },
+      beforeUpdate: async (updatedUser) => {
+        updatedUser.password = await bcrypt.hash(updatedUser.password, 10);
+        return updatedUser;
       },
       // should we include an update fave food hook?
   },

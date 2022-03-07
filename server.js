@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 const routes = require('./controllers');
-// const helpers = require('./utils/helpers');
+const helpers = require('./utils/clienthelpers');
 const recipeScraper = require('recipe-scraper');
 
 const sequelize = require('./config/connection');

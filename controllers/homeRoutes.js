@@ -40,6 +40,7 @@ router.get('/meal/:id', async (req, res) => {
     }
 });
 
+
 router.get('/mealplan', withAuth, async (req, res) => {
     try {
         const userData = await User.findbyPk(req.session.user_id, {
@@ -58,9 +59,18 @@ router.get('/mealplan', withAuth, async (req, res) => {
     }
 })
 
+router.get('/register', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/');
+        return;
+    }
+    res.render('register');
+})
+
+
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
-        res.redirect('/profile');
+        res.redirect('/');
         return;
     }
     res.render('login');
