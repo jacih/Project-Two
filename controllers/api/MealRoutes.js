@@ -16,6 +16,47 @@ const withAuth = require('../../utils/auth');
 //     }
 // });
 
+//Route to get a single meal
+router.get('/meal/:id', async (req, res) => {
+  try {
+      const MealPlan = await Meal.findbyPk(req.params.id, {
+          include: [
+              {
+                  model: User,
+                  attributes: ['name'],
+              }
+          ]
+      })
+      
+      const meals = MealPlan.get({ plain: true });
+
+      res.render('meal', {
+          ...meals,
+          logged_in: req.session.logged_in
+      });
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
+router.get('/mealplan', withAuth, async (req, res) => {
+  try {
+      const userData = await User.findbyPk(req.session.user_id, {
+          attributes: { excludes: ['password'] },
+          include: [{ model: Meal }],
+      });
+
+      const user = userData.get({ plain: true });
+
+      res.render('mealplan', {
+          ...user,
+          logged_in: true
+      });
+  } catch (err) {
+      res.status(500).json(err);
+  }
+})
+
 //Delete meal
 router.delete('/:id', async (req, res) => {
     try {

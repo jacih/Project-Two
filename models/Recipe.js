@@ -29,7 +29,7 @@ Recipe.init(
     image: {
       type: DataTypes.TEXT(),
     },
-    recipe_link: {
+    link: {
       type: DataTypes.TEXT()
     },
   },

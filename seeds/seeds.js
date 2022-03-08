@@ -1,21 +1,24 @@
 const sequelize = require('../config/connection');
-console.log('1');
+// console.log('1');
 const { User } = require('../models');
 const userData = require('./userData.json');
 
-const recipeSeeding = require('./recipeData');
+const recipeData = require('./recipeData');
+// const recipeSeeding = recipeData.recipeSeeding;
+const altrecipeSeed = recipeData.altrecipeSeed;
 
 const mealData = require('./mealData');
 const mealSeeding = mealData.seedMeals;
 
 const seedAll = async () => {
-  console.log('2');
   await sequelize.sync({ force: true });
   console.log('Database synced');
-  console.log('3');
+  
   mealSeeding();
-  console.log('4');
-  recipeSeeding();
+  altrecipeSeed();
+  // commented out due to how buggy scraper was; for seeding on heroku.
+  // recipeSeeding();
+  
   console.log('meals seeded')
 
   await User.bulkCreate(userData, {
